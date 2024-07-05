@@ -1,9 +1,11 @@
 <!-- omit in toc -->
+
 # Web API for the RMLMapper
 
 ![code coverage](https://img.shields.io/badge/coverage-100%25-success.svg)
 
 <!-- omit in toc -->
+
 ## Table of contents
 
 - [Requirements](#requirements)
@@ -20,6 +22,7 @@
 - [License](#license)
 
 ## Requirements
+
 - Node.js
 - Java VM
 
@@ -55,13 +58,13 @@ server.listen(config.port);
 
 The config object looks as follows:
 
- - `rmlmapper.path`: path to the RMLMapper jar (required).
- - `rmlmapper.version`: version of the used RMLMapper. This is shown on the main page of the API (required).
- - `baseURL`: url of where the API will be available. This is shown on the main page of the API (default: http://localhost + port).
- - `removeTempFolders`: if this is set true, temporary folders are removed once the execution of one call is done (default: true).
- - `logLevel`: log level used by the logger (default: info).
- - `port`: port of the server (default: 4000).
- - `basePath`: the path preceding all routes (default: /).
+- `rmlmapper.path`: path to the RMLMapper jar (required).
+- `rmlmapper.version`: version of the used RMLMapper. This is shown on the main page of the API (required).
+- `baseURL`: url of where the API will be available. This is shown on the main page of the API (default: http://localhost + port).
+- `removeTempFolders`: if this is set true, temporary folders are removed once the execution of one call is done (default: true).
+- `logLevel`: log level used by the logger (default: info).
+- `port`: port of the server (default: 4000).
+- `basePath`: the path preceding all routes (default: /).
 
 ### CLI
 
@@ -89,7 +92,7 @@ Options:
   -h, --help                       display help for command
 ```
 
-Parameters can also be set via a configuration file called `config.json`, 
+Parameters can also be set via a configuration file called `config.json`,
 which is located in the current working directory,
 and contains same options as the [config object](#library) when using the package as library.
 An example can be found in `config_example.json`.
@@ -101,9 +104,13 @@ The version is automatically determined.
 - Build image: `docker build -t rmlmapper-webapi .`
 - Run container: `docker container run -p 4000:4000 rmlmapper-webapi`
 
+### Docker hub
+
+    $ docker pull zihancr/rmlmapper
+
 ## Configuration object/file
 
-Parameters can also be set via a configuration file called `config.json`, 
+Parameters can also be set via a configuration file called `config.json`,
 which is located in the current working directory,
 and contains the following settings:
 
@@ -131,12 +138,12 @@ The calls are also described using the [Open API specification](https://github.c
 - Install dependencies: `npm install`.
 - The RMLMapper needs to be available in the root and called `rmlmapper.jar`.
   Download via `npm run download:rmlmapper [version]`.
-    - `version` is optional to get a specific version, e.g. `5.0.0` (default: latest)
+  - `version` is optional to get a specific version, e.g. `5.0.0` (default: latest)
 
 ### Run tests
 
 - Run the tests: `npm test`.
-The test framework is [Mocha](https://mochajs.org/) and the code coverage is provided via [Istanbul](https://istanbul.js.org/).
+  The test framework is [Mocha](https://mochajs.org/) and the code coverage is provided via [Istanbul](https://istanbul.js.org/).
 
 ### Use
 
@@ -144,5 +151,5 @@ The test framework is [Mocha](https://mochajs.org/) and the code coverage is pro
 
 ## License
 
-This code is copyrighted by [Ghent University – imec](http://idlab.ugent.be/) and 
+This code is copyrighted by [Ghent University – imec](http://idlab.ugent.be/) and
 released under the [MIT license](http://opensource.org/licenses/MIT).
